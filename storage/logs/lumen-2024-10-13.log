@@ -1,0 +1,1146 @@
+[2024-10-13 18:45:57] production.ERROR: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it (SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it (SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php:712)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'forge', Object(SensitiveParameterValue), Array)
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php(45): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(1064): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(1100): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(442): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(368): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#23 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#24 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#25 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+"} 
+[2024-10-13 18:46:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:47:21] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:48:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:49:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:50:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:51:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:52:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:52:12] production.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:53:12] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:54:12] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:55:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:56:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:57:07] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php:712)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'forge', Object(SensitiveParameterValue), Array)
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\Connector.php(45): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(1064): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(1100): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(442): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(368): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#23 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#24 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#25 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+"} 
+[2024-10-13 18:57:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:57:22] production.ERROR: Call to undefined function Mlntn\Console\Commands\now() {"exception":"[object] (Error(code: 0): Call to undefined function Mlntn\\Console\\Commands\\now() at C:\\xampp\\htdocs\\serverinfoid\\vendor\\mlntn\\lumen-artisan-serve\\src\\Serve.php:55)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Mlntn\\Console\\Commands\\Serve->handle()
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Mlntn\\Console\\Commands\\Serve), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2024-10-13 18:58:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 18:58:25] production.ERROR: There are no commands defined in the "config" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"config\" namespace. at C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace('config')
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('config:cache')
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2024-10-13 18:58:34] production.ERROR: Command "config" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"config\" is not defined. at C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php:720)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('config')
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2024-10-13 18:59:11] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:00:12] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:01:12] production.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:02:11] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:02:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:03:02] local.ERROR: Database (C:\xampp\htdocs\serverinfoid\database\database.sqlite) does not exist. (SQL: select * from sqlite_master where type = 'table' and name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database (C:\\xampp\\htdocs\\serverinfoid\\database\\database.sqlite) does not exist. (SQL: select * from sqlite_master where type = 'table' and name = migrations) at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php:712)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from s...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from s...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(346): Illuminate\\Database\\Connection->select('select * from s...', Array, false)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\Builder.php(134): Illuminate\\Database\\Connection->selectFromWriteConnection('select * from s...', Array)
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\Builder->hasTable('migrations')
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 {main}
+
+[previous exception] [object] (InvalidArgumentException(code: 0): Database (C:\\xampp\\htdocs\\serverinfoid\\database\\database.sqlite) does not exist. at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\SQLiteConnector.php:34)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(222): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#1 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(1064): call_user_func(Object(Closure))
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(442): Illuminate\\Database\\Connection->getPdo()
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(368): Illuminate\\Database\\Connection->getPdoForSelect(false)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from s...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('select * from s...', Array, Object(Closure))
+#7 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->run('select * from s...', Array, Object(Closure))
+#8 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Connection.php(346): Illuminate\\Database\\Connection->select('select * from s...', Array, false)
+#9 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Schema\\Builder.php(134): Illuminate\\Database\\Connection->selectFromWriteConnection('select * from s...', Array)
+#10 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\Builder->hasTable('migrations')
+#11 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(673): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(78): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#14 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#20 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#21 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2024-10-13 19:03:11] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:04:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:05:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:06:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:07:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:08:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:09:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:10:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:11:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:11:45] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php:720)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('server')
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\serverinfoid\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2024-10-13 19:12:11] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:12:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:13:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:14:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:15:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:16:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:17:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:18:13] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:19:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:20:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:21:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:22:11] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:22:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:23:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:24:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:25:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:26:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:27:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:28:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:29:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:30:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:31:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:32:11] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:32:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:33:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:34:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:35:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:36:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:37:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:38:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:39:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:40:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:41:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:42:11] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:42:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:43:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:44:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:45:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:46:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:47:23] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:48:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:49:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:50:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:51:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:52:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:52:12] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\View\Compilers\Compiler in C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php:1104
+Stack trace:
+#0 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(1011): Illuminate\Container\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(946): Illuminate\Container\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(908): Illuminate\Container\Container->resolveDependencies(Array)
+#3 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\View...')
+#4 C:\xampp\htdocs\serverinfoid\vendor\illuminate\container\Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\View...', Array)
+#5 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\Application.php(300): Illuminate\Container\Container->make('Illuminate\\View...', Array)
+#6 C:\xampp\htdocs\serverinfoid\vendor\laravel\lumen-framework\src\helpers.php(42): Laravel\Lumen\Application->make('Illuminate\\View...', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Unresolvable dependency resolving [Parameter #1 [ <required> $cachePath ]] in class Illuminate\\View\\Compilers\\Compiler in C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104
+Stack trace:
+#0 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(1011): Illuminate\\Container\\Container->unresolvablePrimitive(Object(ReflectionParameter))
+#1 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(946): Illuminate\\Container\\Container->resolvePrimitive(Object(ReflectionParameter))
+#2 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(908): Illuminate\\Container\\Container->resolveDependencies(Array)
+#3 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\View...')
+#4 C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php(694): Illuminate\\Container\\Container->resolve('Illuminate\\\\View...', Array)
+#5 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\Application.php(300): Illuminate\\Container\\Container->make('Illuminate\\\\View...', Array)
+#6 C:\\xampp\\htdocs\\serverinfoid\\vendor\\laravel\\lumen-framework\\src\\helpers.php(42): Laravel\\Lumen\\Application->make('Illuminate\\\\View...', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at C:\\xampp\\htdocs\\serverinfoid\\vendor\\illuminate\\container\\Container.php:1104)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:53:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:54:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:55:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:56:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-13 19:57:12] local.ERROR: Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined function app_path() in Command line code:1
+Stack trace:
+#0 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
